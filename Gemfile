@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 # Specify your gem's dependencies in liquid-rails.gemspec
 gemspec
 
+gem 'rake',        '< 11.0'
 gem 'rails',       '~> 4.0.13'
 gem 'rspec-rails', '~> 3.2.0'
 gem 'guard-rspec', '~> 4.5.0'
