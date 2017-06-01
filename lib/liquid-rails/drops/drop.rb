@@ -57,6 +57,10 @@ module Liquid
         associate(:has_many, attrs)
       end
 
+      def self.has_one(*attrs)
+        associate(:has_one, attrs)
+      end
+
       def self.associate(type, attrs)
         options = attrs.extract_options!
         self._associations = _associations.dup
