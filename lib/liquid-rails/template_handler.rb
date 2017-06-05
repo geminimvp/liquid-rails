@@ -9,7 +9,7 @@ module Liquid
       def initialize(view)
         @view       = view
         @controller = @view.controller
-        @helper     = ActionController::Base.helpers
+        @helper     = @controller.helpers
       end
 
       def render(template, local_assigns={})

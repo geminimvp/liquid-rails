@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'liquid-rails/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'taktsoft_liquid-rails'
+  spec.name          = 'liquid-rails'
   spec.version       = Liquid::Rails::VERSION
   spec.authors       = ['Chamnap Chhorn', 'Taktsoft Developers']
   spec.email         = ['chamnapchhorn@gmail.com', 'developers@taktsoft.com']
