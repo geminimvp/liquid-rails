@@ -15,6 +15,14 @@ class HomeController < ApplicationController
   def index_partial
   end
 
+  def index_partial_with_passed_array
+    @widgets = ['thing one', 'thing two'].map {|widget_name|
+      w = Widget.new
+      w.name = widget_name
+      Liquid::Rails::Drop.new(w)
+    }
+  end
+
   def index_partial_with_full_path
   end
 

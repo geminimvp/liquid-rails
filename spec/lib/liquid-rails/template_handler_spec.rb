@@ -41,6 +41,12 @@ describe 'Request', type: :feature do
 
       expect(page.body.strip).to eq("Foospace::BarController\n\nBar Partial")
     end
+
+    it 'renders partial with passed-in array' do
+      visit '/index_partial_with_passed_array'
+
+      expect(page.body).to eq("Application Layout\nLiquid on Rails\nWidgets Partial\nthing one\nthing two\nShared Partial")
+    end
   end
 
   context 'render with filter' do
