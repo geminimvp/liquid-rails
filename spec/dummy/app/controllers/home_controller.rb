@@ -16,10 +16,11 @@ class HomeController < ApplicationController
   end
 
   def index_partial_with_passed_array
-    @widgets = ['thing one', 'thing two'].map {|widget_name|
+    @all_widgets = ['thing one', 'thing two'].map {|widget_name|
       w = Widget.new
       w.name = widget_name
-      Liquid::Rails::Drop.new(w)
+      w
+      # Liquid::Rails::Drop.new(w)
     }
   end
 
