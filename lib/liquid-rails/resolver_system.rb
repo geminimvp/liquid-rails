@@ -4,7 +4,7 @@ module Liquid
   module Rails
     class ResolverSystem
       # Return a valid liquid template string for requested partial path
-      def read_template_file(template_path, context)
+      def foo_read_template_file(template_path, context)
         controller = context.registers[:controller]
 
         controller_path = controller.controller_path

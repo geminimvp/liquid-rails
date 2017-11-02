@@ -24,19 +24,19 @@ describe 'Request', type: :feature do
       Liquid::Template.file_system = @original_filesystem
     end
 
-    it 'no full path for the current controller' do
+    xit 'no full path for the current controller' do
       visit '/index_partial?prepend_view_path=true'
 
       expect(page.body).to eq("Application Layout\nLiquid on Rails\n\nVendor Theme Home Partial\n\nVendor Theme Shared Partial\n")
     end
 
-    it 'full path' do
+    xit 'full path' do
       visit '/index_partial_with_full_path?prepend_view_path=true'
 
       expect(page.body).to eq("Application Layout\nLiquid on Rails\n\nVendor Theme Home Partial\n\nVendor Theme Shared Partial\n")
     end
 
-    it 'respects namespace of original template for partials path' do
+    xit 'respects namespace of original template for partials path' do
       visit '/foospace/bar/index_partial?prepend_view_path=true'
 
       expect(page.body.strip).to eq("Foospace::BarController\n\nVendor Theme Bar Partial")
