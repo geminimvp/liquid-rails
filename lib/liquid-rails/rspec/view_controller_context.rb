@@ -45,8 +45,10 @@ module Liquid
         def build_request_for_liquid
           if ::Rails::VERSION::MAJOR < 5
             ActionController::TestRequest.new({'PATH_INFO' => '/'})
-          else
+          elsif ::Rails::VERSION::MINOR < 1
             ActionController::TestRequest.new({'PATH_INFO' => '/'}, {})
+          else
+            ActionDispatch::TestRequest.new({'PATH_INFO' => '/'})
           end
         end
 
