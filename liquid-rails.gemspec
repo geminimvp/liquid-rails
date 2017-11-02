@@ -29,7 +29,7 @@ Gem::Specification.new do |spec|
   end
 
   spec.add_dependency 'rails', '>= 5.0', '< 5.1'
-  spec.add_dependency 'liquid', '>= 3.0.0', '< 4.0'
+  spec.add_dependency 'liquid', '>= 3.0.0' # , '< 4.0'
   spec.add_dependency 'kaminari', '>= 0.16.1'
 
   spec.add_development_dependency 'bundler', '>= 1.0.0'
