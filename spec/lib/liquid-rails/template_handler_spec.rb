@@ -45,7 +45,7 @@ describe 'Request', type: :feature do
     it 'renders partial with passed-in array' do
       visit '/index_partial_with_passed_array'
 
-      expect(page.body).to eq("Application Layout\nLiquid on Rails\nWidgets Partial\nthing one\nthing two\nShared Partial")
+      expect(page.body).to eq("Application Layout\nLiquid on Rails\nWidgets Partial\n\n  thing one\n\n  thing two\n\nShared Partial")
     end
   end
 

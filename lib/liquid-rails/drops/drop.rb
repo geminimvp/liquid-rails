@@ -89,7 +89,7 @@ module Liquid
       end
 
       def attributes
-        @attributes ||= self.class._attributes.dup.each_with_object({}) do |name, hash|
+        @attributes ||= self.class._attributes.to_a.dup.each_with_object({}) do |name, hash|
           hash[name.to_s] = send(name)
         end
       end
