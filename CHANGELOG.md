@@ -12,8 +12,23 @@
 
 ### Resolved Issues
 
+## 0.1.6
+
+* Fixes autoloading for ResolverSystem
+
+## 0.1.5
+
+* Uses controller's lookup context to find partials.
+
+## 0.1.4
+
+* Support for Rails 5.0
 * Fix Filter overrides registered public methods as non public: h
 * Support Liquid v3.0.6, Rails belows 5, and Kaminari below v1.0.0
+
+## 0.1.3
+
+* ?!?
 
 ## 0.1.2
 

@@ -8,6 +8,8 @@ Bundler.require(*Rails.groups)
 require "liquid-rails"
 
 module Dummy
+  RAILS_GEM_VERSION = Gem::Version.new(Rails::VERSION::STRING).freeze
+
   class Application < Rails::Application
     if Rails.version.start_with?('5.1')
       # Initialize configuration defaults for originally generated Rails version.
