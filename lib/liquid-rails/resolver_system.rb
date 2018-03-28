@@ -4,7 +4,7 @@ module Liquid
   module Rails
     class ResolverSystem
       # @param root [String] the root path where all templates may be found
-      def initialize(root = "")
+      def initialize(root='')
         @root = root
       end
 

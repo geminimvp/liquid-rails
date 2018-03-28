@@ -10,7 +10,7 @@ module Liquid
       end
 
       initializer 'liquid-rails.include_partial' do |app|
-        Liquid::Template.file_system = Liquid::Rails::ResolverSystem.new
+        Liquid::Template.file_system = Liquid::Rails::ResolverSystem.new('')
       end
 
       initializer 'liquid-rails.setup_drop' do |app|
