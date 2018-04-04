@@ -37,12 +37,19 @@ class ProfileDrop < Liquid::Rails::Drop
 end
 
 Post    = Class.new(Model)
+PostBauble = Class.new(Model)
 Comment = Class.new(Model)
 
 PostDrop = Class.new(Liquid::Rails::Drop) do
   attributes :title, :body, :id
+  has_one :post_bauble
   has_many :comments
   has_many :recomments, with: 'ReCommentDrop', class_name: 'CommentsDrop'
+end
+
+PostBaubleDrop = Class.new(Liquid::Rails::Drop) do
+  attributes :greeble
+  belongs_to :post
 end
 
 CommentDrop = Class.new(Liquid::Rails::Drop) do

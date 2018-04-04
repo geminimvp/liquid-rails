@@ -58,7 +58,9 @@ module Liquid
       context 'association' do
         before(:each) do
           @post           = ::Post.new({ title: 'New Post', body: 'Body' })
+          @post_bauble    = ::PostBauble.new({greeble: "flummox"})
           @comment        = ::Comment.new({ id: 1, body: 'ZOMG A COMMENT' })
+          @post.post_bauble = @post_bauble
           @post.comments  = [@comment]
           @comment.post   = @post
 
@@ -84,6 +86,12 @@ module Liquid
 
           it '#recomments returns as ReCommentDrop object' do
             expect(@post_drop.recomments[0]).to be_instance_of(::ReCommentDrop)
+          end
+        end
+
+        context 'has_one' do
+          it '#post_bauble returns as PostBaubleDrop object' do
+            expect(@post_drop.post_bauble).to be_instance_of(::PostBaubleDrop)
           end
         end
 
